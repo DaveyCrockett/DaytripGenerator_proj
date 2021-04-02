@@ -26,3 +26,12 @@ function RandomTransportation(selectTransportation){
 }
 
 RandomTransportation(transportation);
+
+let entertainment = ["Watch a Movie", "See a Play", "Go Rock Climbing", "Go skateboarding", "Go Snowboarding"];
+
+function RandomEntertainment(selectEntertainment){
+    let randoEntertainment = selectEntertainment[Math.floor(Math.random() * selectEntertainment.length)];
+    console.log(randoEntertainment);
+}
+
+RandomTransportation(entertainment);
