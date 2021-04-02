@@ -1,39 +1,23 @@
 "use strict";
 let destinations = ["California", "Hawaii", "Virginia", "Florida"];
+let restaurant = ["Taco Bell", "Lazy Dog", "Waffle House", "Burger King"];
+let transportation = ["Sedan", "SUV", "Truck", "Bus", "Train"];
+let entertainment = ["Watch a Movie", "See a Play", "Go Rock Climbing", "Go skateboarding", "Go Snowboarding"];
 
-    function RandomDestination(selectDestination){
-        let randoDestination = selectDestination[Math.floor(Math.random() * selectDestination.length)];
-        console.log(randoDestination);
-    }
+function RandomSelection(selectChoices){
+    let randoChoices = selectChoices[Math.floor(Math.random() * selectChoices.length)];
+    return randoChoices;
+}
+let randomDestination = RandomSelection(destinations);
+let randomRestaurant = RandomSelection(restaurant);
+let randomTransportation = RandomSelection(transportation);
+let randomEntertainment = RandomSelection(entertainment);
+console.log(randomDestination);
+console.log(randomRestaurant);
+console.log(randomTransportation);
+console.log(randomEntertainment);
 
-    RandomDestination(destinations);
-
-    let restaurant = ["Taco Bell", "Lazy Dog", "Waffle House", "Burger King"];
-
-    function RandomRestaurant(selectRestaurant){
-        let randoRestaurant = selectRestaurant[Math.floor(Math.random() * selectRestaurant.length)];
-        console.log(randoRestaurant);
-    }
-
-    RandomRestaurant(restaurant);
-
-    let transportation = ["Sedan", "SUV", "Truck", "Bus", "Train"];
-
-    function RandomTransportation(selectTransportation){
-        let randoTransportation = selectTransportation[Math.floor(Math.random() * selectTransportation.length)];
-        console.log(randoTransportation);
-    }
-
-    RandomTransportation(transportation);
-
-    let entertainment = ["Watch a Movie", "See a Play", "Go Rock Climbing", "Go skateboarding", "Go Snowboarding"];
-
-    function RandomEntertainment(selectEntertainment){
-        let randoEntertainment = selectEntertainment[Math.floor(Math.random() * selectEntertainment.length)];
-        console.log(randoEntertainment);
-    }
-
-for(let index = 0; index < 3; index++){
+for(let index = 0; index < 10; index++){
 let userInput = prompt("Are you Happy or Sad with choices.")
     
 if(userInput == "Happy"){
@@ -41,13 +25,18 @@ if(userInput == "Happy"){
     break;
 }else if(userInput == "Sad"){
     
-    RandomDestination(destinations);
+    randomDestination = RandomSelection(destinations);
 
-    RandomRestaurant(restaurant);
+    randomRestaurant = RandomSelection(restaurant);
 
-    RandomTransportation(transportation);
+    randomTransportation = RandomSelection(transportation);
 
-    RandomEntertainment(entertainment);
+    randomEntertainment = RandomSelection(entertainment);
+
+    console.log(randomDestination);
+    console.log(randomRestaurant);
+    console.log(randomTransportation);
+    console.log(randomEntertainment);
     
 }
 }
